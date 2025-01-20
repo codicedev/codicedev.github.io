@@ -216,7 +216,7 @@ header h1{
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
-  width:732px;
+  /* width:732px; */
   margin-bottom: 48px;
 }
 
