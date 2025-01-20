@@ -2,20 +2,32 @@
 
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Playfair Display', serif;
-    background: no-repeat center center fixed;
-    background-image: url("../Gallery/background.jpg");
-    background-size: cover;
-    background-color: dimgray;
-    background-blend-mode: multiply;
-    border-radius: 0;
+  font-family: "Plus Jakarta Sans";
+  background: no-repeat center center fixed;
+  background-color: black;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
 }
 
 h1,h2, h3, h4, h5, h6, p{
     color:ghostwhite
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 500;
+}
+
+
+h2 {
+  font-size: 28px;
+  font-weight: 500;
 }
 
 p{
@@ -31,7 +43,10 @@ p{
     background: transparent;
     position: fixed; /* Set the navbar to fixed position */
     top: 0px; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+    width: calc(100% - 320px); /* Full width */
+    margin-top: 24px;
+    margin-left: 160px;
+    margin-right: 160px;
     display: block;
     transition: top 0.5s;
 }
@@ -61,33 +76,60 @@ p{
     text-decoration: none;
   }
 
-.resume {
+.nav_item {
     float: right;
     margin-top: 15px;
     margin-bottom: 5px;
     margin-left: 20px;
     margin-right: 20px;
-    border: 2px solid white;
-    padding: 2.5px 5px;
+    padding: 14px 32px 16px;
     text-align: center;
     display: inline-block;
     transition-duration: 0.4s;
     cursor: pointer;
+    border-radius: 32px;
+    font-size: 14px;
 }
 
-.resume a{
+.nav_item a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav_item:hover a{
+  color:lightsteelblue;
+}
+
+.contact {
+    float: right;
+    background-color:#4136C3;
+    padding: 14px 32px 16px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 16px;
+    margin-right: 16px;
+    text-align: center;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 32px;
+    font-size: 14px;
+}
+
+.contact a{
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-.resume:hover {
+.contact:hover {
     background-color:lightsteelblue;
     opacity: 0.8;
     transition: 0.5s;
 }
 
-.resume:hover a{
+.contact:hover a{
     color:black;
 }
 
@@ -96,100 +138,110 @@ p{
 header {
     text-align: center;
     color: #ffffff;
-    padding: 200px 25px;
-    margin-top: 75px;
-    margin-bottom: 75px;
+    padding: 137px 25px 213px;
 }
 
 header h1{
     font-size: 70px;
 }
 
-.resume2 {
-    background-color: white;
+.check {
+    background-color:#4136C3;
+    padding: 14px 32px 16px;
+    border-radius: 32px;
+    font-size: 14px;
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
-    border: 2px solid white;
-    padding: 2.5px 5px;
+    margin-left: 16px;
+    margin-right: 16px;
     text-align: center;
     display: inline-block;
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
-.resume2 a{
-    color: black;
+.check a{
+    color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 120%;
 }
 
-.resume2:hover {
+.check:hover {
     background-color:lightsteelblue;
     opacity: 0.8;
     transition: 0.5s;
 }
 
-.resume2:hover a{
+.check:hover a{
     color:black;
+}
+
+.hollow {
+  padding: 13px 32px 15px;
+  background-color: black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 16px;
+  margin-right: 16px;
+  border: 1px solid var(--White, #FFF);
+  text-align: center;
+  display: inline-block;
+  transition-duration: 0.4s;
+  border-radius: 32px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.hollow a{
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 120%;
+}
+
+.hollow:hover {
+  background-color:lightsteelblue;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.hollow:hover a{
+  color:black;
+}
+
+.project_des {
+  color: #ADADAD;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  width:732px;
+  margin-bottom: 48px;
 }
 
 /*before*/
 
-.m_container{
-  min-height: 700px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  flex-wrap: wrap;
-}
-
-.slideshow-container{
-  width: 100%;
-}
-
-#before, #hobby{
-    background-color:rgb(38, 52, 70);
-    padding: 100px 200px;
-}
-
-.mySlides {
-  display: none
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white !important;
-  font-weight: bold;
+.sub-title {
+  color: #808080;
   font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0px;
-  border-radius: 3px 0 0 3px;
+.proj-title {
+  color: #E0E0E0;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
 }
 
-.prev {
-  left: 0px;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.chatbot {
+  border-radius: 8px;
+  border: 1px solid var(--Light-grey, #E1E1E1);
+  background: linear-gradient(180deg, #E1E1E1 0%, #FFF 100%);
 }
 
 /* The dots/bullets/indicators */
@@ -204,13 +256,14 @@ header h1{
   transition: background-color 0.6s ease;
 }
 
-/* Fading animation */
-.fad {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+.link {
+  color: #C2B7FF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  text-decoration-line: underline;
+  }
 
 @-webkit-keyframes fade {
   from {opacity: .4} 
@@ -227,158 +280,23 @@ header h1{
   .prev, .next,.text {font-size: 11px}
 }
 
-/*bootcamp*/
-
-#bootcamp{
-    background-color:slategrey;
-    padding: 150px 60px;
-    margin-bottom:0;
-}
-
-.fab, .fas {
-    font-size: 150px;
-    color:rgb(23, 32, 43);
-}
-
-.boot{
-    color:rgb(23, 32, 43);
-    font-weight: bold;
-}
-
-#bootcamp ul{
-    margin: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-#bootcamp li{
-    display:inline-table;
-    margin: 40px;
-    vertical-align: middle !important;
-}
-
-#bootcamp li p{
-    margin: 0px;
-    padding: 10px;
-    font-size: 150%;
-    font-style: normal;
-    font-weight: bold;
-    color: rgb(23, 32, 43);
-    display:table-row;
-}
-
-/*Gallery*/
-
-.popup{
-    cursor: pointer
-
-}
-        
-.row img {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 10px 10px 5px darkgrey;
-    -moz-box-shadow: 10px 10px 5px darkgrey;
-    -webkit-box-shadow: 10px 10px 5px darkgrey;
-    -khtml-box-shadow: 10px 10px 5px  darkgrey;
-  }
   
-.row img:hover {opacity: 0.7;}
-  
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  }
-  
-  /* Modal Content (image) */
-  .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-  }
-  
-  /* Caption of Modal Image */
-  #caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-  }
-  
-  /* Add Animation */
-  .modal-content, #caption {  
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-  }
-  
-  @-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
-  }
-  
-  @keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-  }
-  
-  /* The Close Button */
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
-    .modal-content {
-      width: 100%;
-    }
-    
-  }
-
+/* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
-  #before, #bootcamp, #hobby, #contact{
-    padding: 80px;
+  .modal-content {
+    width: 100%;
   }
 }
+
+
 
 /*Footer*/
 
 footer {
-  width: 100%;
-  background-color:slategrey;
-  padding: 150px 60px;
+  display: flex;
+  width: 100vw;
+  background: linear-gradient(19deg, #050505 25.5%, #141738 100%);
+  padding: 72px 160px 82px;
   text-align: center;
 }
 
